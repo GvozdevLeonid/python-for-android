@@ -535,13 +535,13 @@ def build_recipes(build_order, python_modules, ctx, project_dir,
 
         # 4) biglink everything
         info_main('# Biglinking object files')
-        if not ctx.python_recipe:
-            biglink(ctx, arch)
-        else:
-            warning(
-                "Context's python recipe found, "
-                "skipping biglink (will this work?)"
-            )
+        # if not ctx.python_recipe:
+        biglink(ctx, arch)
+        # else:
+        #     warning(
+        #         "Context's python recipe found, "
+        #         "skipping biglink (will this work?)"
+        #     )
 
         # 5) postbuild packages
         info_main('# Postbuilding recipes')
